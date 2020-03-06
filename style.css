@@ -1,0 +1,32 @@
+  /* Circular Progress bar */
+  .circular-progress{
+    margin: 0 auto;
+    height: 120px;
+    width: 120px;
+    position: relative;
+  }
+  .circular-progress circle {
+    transition: stroke-dashoffset 1s linear;
+    shape-rendering: geometricprecision;
+    fill: none;
+  }
+  .circular-progress .dot{
+    stroke-width: 2px;
+    transform-origin: 50%;
+    transform: rotate(0deg);
+    transition: all linear 1s;
+  }
+  .circular-progress .info-wrap{
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+  }
+  .circular-progress .info-wrap .total-percentage{
+    font-weight: 600;
+    color: #272B34;
+    display: block;
+  }

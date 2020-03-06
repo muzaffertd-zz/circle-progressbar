@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    
+    <div class="container">
+        <div class="circular-progress q1"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- function circular_progressbar(){
+    let svgWidth = $('#svg').width();
+    var $allCircle = $('#svg circle');
+    let allC_len = $allCircle.length;
+    let colArr = ['#7033FF','#F9A600','#FF7D4C'];
+    let col_len = colArr.length;
+    const tenpercent = (10*svgWidth)/100;
+    $($allCircle[0]).attr('r',(svgWidth - tenpercent)/2);
+    $($allCircle[1]).attr('r',(svgWidth - tenpercent)/2);
+    $($allCircle[2]).attr('r',(svgWidth - tenpercent*2)/2);
+    $($allCircle[3]).attr('r',(svgWidth - tenpercent*2)/2);
+    $($allCircle[4]).attr('r',(svgWidth - tenpercent*3)/2);
+    $($allCircle[5]).attr('r',(svgWidth - tenpercent*3)/2);
+    console.log('r1,r2,r3',(svgWidth - tenpercent)/2,(svgWidth - tenpercent*2)/2,(svgWidth - tenpercent*3)/2);
+    for(let i=0,j=0; i<allC_len-3 && j<col_len;i++ ){
+      if(i%2 == 0){
+        console.log('triggered')
+        $($allCircle[i]).css({strokeDasharray: (Math.PI*2*($($allCircle[i]).attr('r')))});
+      }
+      else{
+        $($allCircle[i]).css({stroke:colArr[j],strokeDasharray: (Math.PI*2*($($allCircle[i]).attr('r'))),strokeDashoffset: (Math.PI*2*($($allCircle[i]).attr('r')))});
+        $('#svg .dot').eq(col_len - j -1).css({stroke:colArr[j]})
+      j++;
+      }
+    }
+    
+    $('#percent').on('change', function(){
+      let valArray = [90,80,65];
+      let v_len = valArray.length;
+      var $circle = $('#svg .bar');
+      var c_len = $circle.length;
+       let dataPercentage = 0;
+      for(let i=0, j=0; i<c_len && j<v_len ;i++){
+        var r = $($circle[i]).attr('r');
+        var c = Math.PI*(r*2);
+       let val = valArray[j];
+        dataPercentage += val;    
+        if (val < 0) { val = 0;}
+        if (val > 100) { val = 100;}    
+        var pct = ((100-val)/100)*c;
+        $($circle[i]).css({ strokeDashoffset: pct});
+        let angle = parseInt((c - pct)*(360/c));
+       $('#svg .dot').eq(v_len-j-1).css({transform: `rotate(${angle}deg)`});
+       j++;
+      }
+      dataPercentage = parseInt(dataPercentage/3);
+      
+       $('#cont').attr('data-pct',dataPercentage);
+    });
+  } -->
